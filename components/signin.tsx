@@ -1,8 +1,9 @@
 "use client"
-
 import axios from "axios";
 import { ChangeEventHandler, useState } from "react";
+interface emailData{
 
+}
 export default function Signin() {
     let [userName,setUserName] = useState()
     let [pswd,setPswd] = useState()
@@ -17,7 +18,7 @@ export default function Signin() {
         console.log("hey there",userName);
     }
     return <div className="h-screen flex justify-center flex-col">
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
         <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
                 <div>
                     <div className="px-10">
@@ -39,7 +40,7 @@ export default function Signin() {
                     </div>
                 </div>
             </a>
-        </div>
+        </div> */}
     </div>
 }
 
