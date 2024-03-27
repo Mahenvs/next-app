@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeSetter from "@/components/ThemeSetter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,10 +15,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="border-b p-4">Email Test</div>
+        <div className="flex justify-between items-center border-b p-4 dark:bg-black dark:text-white text-black">
+          <div>Email Test</div>
+          <div className="mx-2">
+            <ThemeSetter/>
+          </div>
+        </div>
         {children}
       </body>
     </html>

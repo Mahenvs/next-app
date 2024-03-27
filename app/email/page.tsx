@@ -10,7 +10,7 @@ export default function Email() {
   const sendHandler = async (event: any) => {
     console.log(fromAdd, toAdd);
     event.preventDefault;
-    const resp = await axios.post("http://localhost:3000/api/user", {
+    const resp = await axios.post("http://dev-mahe.tech/api/user", {
       fromAddress: fromAdd,
       toAddress: toAdd,
     });
